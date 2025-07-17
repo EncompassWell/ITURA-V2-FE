@@ -1,55 +1,60 @@
 import React, { useEffect, useState } from "react";
-import markImg2 from "../../assets/mark.svg";
-import markImg from "../../assets/marklogo.svg";
 import { Element } from "react-scroll";
+import Image from "next/image";
 
 const CarouselFeatures = () => {
   const slideItem = [
     {
       id: 1,
       title: "Remix Your Mind, Reimagine Your Art",
-      image: "./carousel1.svg",
-      icon: "./icon1.svg",
+      image:
+        "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604884/carousel3_a6phci.svg",
+      icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604817/icon1_tdhgww.svg",
       details:
         "Play around with thoughts and feelings, then turn them into something beautiful and new!",
     },
     {
       id: 2,
       title: "Find Your Flow with Custom Sound Journeys",
-      image: "./carousel2.svg",
-      icon: "./icon2.svg",
+      image:
+        "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604874/carousel2_ushvpx.svg",
+      icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604817/icon2_cv9wy0.svg",
       details:
         "Chill out, focus up, or spark ideas with sounds made just for your mood.",
     },
     {
       id: 3,
       title: "Connect & Share Securely",
-      image: "./carousel3.svg",
-      icon: "./icon3.svg",
+      image:
+        "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604877/carousel5_yfxb4v.svg",
+      icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604818/icon5_ndktig.svg",
       details:
         "Play around with thoughts and feelings, then turn them into something beautiful and new!",
     },
     {
       id: 4,
       title: "Turn Feelings into Art",
-      image: "./carousel4.svg",
-      icon: "./icon4.svg",
+      image:
+        "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604883/carousel6_i02lfz.svg",
+      icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604818/icon4_udcsqh.svg",
       details:
         "Let your emotions lead the way with drawing, collages, and photo art. Your feelings, your masterpiece!",
     },
     {
       id: 5,
       title: "Journal Guidance for Your Creative Well-being",
-      image: "./carousel5.svg",
-      icon: "./icon5.svg",
+      image:
+        "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604868/carousel1_y3lt8o.svg",
+      icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604818/icon5_ndktig.svg",
       details:
         "Chat with your smart AI buddy for cool insights, fresh prompts, and personalised wellness tips.",
     },
     {
       id: 6,
       title: "See Your Feelings in Colour",
-      image: "./carousel6.svg",
-      icon: "./icon6.svg",
+      image:
+        "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604886/carousel4_c2ryyh.svg",
+      icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604819/icon6_y0sdba.svg",
       details:
         "Chill out, focus up, or spark ideas with sounds made just for your mood.",
     },
@@ -71,7 +76,12 @@ const CarouselFeatures = () => {
           <div
             className={`p-3 border border-white/20 flex items-center justify-center w-[50px] h-[45px] rounded-lg mb-auto mr-4 shadow-lg -rotate-12 bg-darkBg/5`}
           >
-            <img src={markImg} alt="" />
+            <Image
+              src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604684/marklogo_o2ba0x.svg"
+              alt=""
+              width={20}
+              height={20}
+            />
           </div>
           <h2 className="text-[28px] lg:text-[56px] md:text-[40px] font-medium leading-14">
             What you can do, <br className="hidden lg:block md:block" /> with{" "}
@@ -80,15 +90,21 @@ const CarouselFeatures = () => {
           <div
             className={`p-3 border border-white/20 flex items-center justify-center w-[50px] h-[45px] rounded-lg mt-auto mr-4 shadow-lg rotate-12 bg-darkBg/5`}
           >
-            <img src={markImg2} alt="" />
+            <Image
+              src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604683/mark_roa5ys.svg"
+              alt=""
+              width={20}
+              height={20}
+            />
           </div>
         </div>
 
         <div className="flex flex-col lg:flex-row md:flex-row gap-10 items-center">
           <div className="lg:w-[40%] md:w-[33%] w-[100%] transition-all duration-500 ease-in-out">
-            <img
+            <Image
               src={slideItem[activeIndex].image}
               alt="Active feature"
+              fill
               className="w-full h-auto rounded-xl"
             />
           </div>
@@ -107,9 +123,11 @@ const CarouselFeatures = () => {
                 >
                   <div className="flex justify-between p-4 items-center">
                     <div className="lg:h-[60px] lg:w-[60px] md:h-[40px] md:w-[40px] rounded-full bg-white/10 flex justify-center items-center mr-4">
-                      <img
+                      <Image
                         src={info.icon}
                         alt=""
+                        width={20}
+                        height={20}
                         className="lg:h-[30px] lg:w-[30px] h-[20px] w-[20px]"
                       />
                     </div>

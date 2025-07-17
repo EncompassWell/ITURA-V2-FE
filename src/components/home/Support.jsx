@@ -9,7 +9,9 @@ const Support = () => {
         <Image
           src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604690/support_h8e57d.svg"
           alt=""
-          fill
+          width={300}
+          height={300}
+          className="w-[100%]"
         />
       </div>
       <div className="lg:w-[48%] md:w-[48%] w-[100%] mb-6">
@@ -32,7 +34,7 @@ const Support = () => {
           licensed therapists who understand the creative journey — safely,
           privately, and at your own pace.
         </p>
-        <button className="bg-linear-to-r text-[11px] lg:text-[16px] md:text-[16px] from-lightOrange to-orange rounded-xl text-white p-3 font-[500] px-10">
+        <button className="bg-gradient-to-r text-[11px] lg:text-[16px] md:text-[16px] from-lightOrange to-orange rounded-xl text-white p-3 font-[500] px-10">
           Find a Vetted Therapist
         </button>
       </div>

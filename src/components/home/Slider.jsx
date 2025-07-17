@@ -55,7 +55,8 @@ const Slider = () => {
                 <Image
                   src={slides[actualIndex]}
                   alt={`art-${actualIndex}`}
-                  fill
+                  width={400}
+                  height={400}
                   className="w-[200px] h-[300px] object-cover rounded-2xl shadow-md"
                 />
               </motion.div>

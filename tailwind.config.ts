@@ -11,7 +11,19 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        darkBg: "#030A04",
+        gradientYellow: "#F8C238",
+        gradientRed: "#F83838",
+        orange: "#FF6B00",
+        lightOrange: "#FF9E58",
+        footerBg: "#161320",
+        textGrey: "#A39EB6",
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        dmSans: ['DM Sans', 'sans-serif'],
+        instrumentSerif: ['Instrument Serif', 'serif'],
+      }
     },
   },
   plugins: [],

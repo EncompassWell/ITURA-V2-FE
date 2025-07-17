@@ -1,28 +1,27 @@
 import React, { useState, useEffect } from "react";
 import OverviewCard from "./OverviewCard";
 import Lottie from "lottie-react";
-import featureAnimation from "../../assets/feature.json";
+import featureAnimation from "@/constants/feature.json";
 
 const Features = () => {
   const bgClass = "bg-white/10";
-  const themeColor = "bg-black/5";
 
   const data = [
     {
       id: 1,
-      image: "./img-1.svg",
+      image: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604819/img-1_wuj6aw.svg",
       title: " A Doorway.",
       text: " Helping you reflect, express, and find balance.",
     },
     {
       id: 2,
-      image: "./feat2.svg",
+      image: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604817/feat2_zx1cc2.svg",
       title: "A Safe Space.",
       text: "Chat with Itura to gain insights.",
     },
     {
       id: 3,
-      image: "./pause.svg",
+      image: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604685/pause_exjxh8.svg",
       title: "Quick Boosts.",
       text: "Your Daily Inspiration & Insights..",
     },

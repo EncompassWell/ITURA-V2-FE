@@ -28,7 +28,7 @@ const TopArt = () => {
           Community <br /> Creations
         </h3>
         <p className="my-2 text-white/80 text-center lg:text-left md:text-left">See what other creatives are making, and share your own!</p>
-        <button className="bg-linear-to-r mt-10 from-orange to-lightOrange rounded-xl text-white py-3 px-8 font-[500]">
+        <button className="bg-gradient-to-r mt-10 from-orange to-lightOrange rounded-xl text-white py-3 px-8 font-[500]">
             Explore
           </button>
       </div>

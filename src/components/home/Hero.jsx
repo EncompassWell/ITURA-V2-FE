@@ -2,7 +2,7 @@ import React from "react";
 import { CiStar } from "react-icons/ci";
 import { GoDotFill } from "react-icons/go";
 import Lottie from "lottie-react";
-import ituraAnimation from "../../assets/itura.json";
+import ituraAnimation from "@/constants/itura.json"
 
 const Hero = () => {
   return (
