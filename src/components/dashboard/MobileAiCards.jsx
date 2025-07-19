@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useCallback } from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import artImg from "../../assets/art.svg";
 import { GoDotFill } from "react-icons/go";
-import mintImg from "../../assets/mint.svg";
-import playImg from "../../assets/play.svg";
+import Image from "next/image";
 
 const MobileAiCards = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -31,19 +31,19 @@ const MobileAiCards = () => {
       title: "Create",
       subtitle: "Art",
       description: "Create your desired art to express your mood",
-      img: artImg,
+      img: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604671/art_mzaz5n.svg",
     },
     {
       title: "Play",
       subtitle: "Sounds",
       description: "Play desired sound to express your mood",
-      img: playImg,
+      img: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604686/play_ftvnf8.svg",
     },
     {
       title: "What's on your",
       subtitle: "Mind",
       description: "Let’s talk about what’s on your mind.",
-      img: mintImg,
+      img: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604685/mint_vgmzdu.svg",
     },
   ];
 
@@ -64,7 +64,13 @@ const MobileAiCards = () => {
             <p className="text-[12px] ml-4 w-full md:w-[80%]">
               {card.description}
             </p>
-            <img src={card.img} alt="" className="w-[110px] ml-auto" />
+            <Image
+              src={card.img}
+              alt={card.subtitle}
+              width={100}
+              height={100}
+              className="w-[60%] ml-auto"
+            />
           </div>
         ))}
       </div>

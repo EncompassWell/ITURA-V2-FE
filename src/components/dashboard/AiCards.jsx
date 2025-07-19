@@ -1,12 +1,9 @@
 import React from "react";
-import artImg from "../../assets/art.svg";
 import { GoDotFill } from "react-icons/go";
-import mintImg from "../../assets/mint.svg";
-import playImg from "../../assets/play.svg";
-
+import Image from "next/image";
 
 const AICards = () => {
-  const themeColor = "bg-white/15 border-white/20"
+  const themeColor = "bg-white/15 border-white/20";
 
   return (
     <div className="lg:flex md:flex hidden justify-between items-center flex-col lg:flex-row md:flex-row my-0 lg:my-10 md:my-10">
@@ -19,7 +16,13 @@ const AICards = () => {
         <p className="text-[12px] ml-4 w-[100%] lg:w-[80%] md:w-[80%]">
           Create your desired art to express your mood
         </p>
-        <img src={artImg} alt="" className="w-[110px] ml-auto" />
+        <Image
+          src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604671/art_mzaz5n.svg"
+          alt="art illustration"
+          width={50}
+          height={50}
+          className="w-[70%] ml-auto"
+        />
       </div>
       <div
         className={`rounded-[30px] p-6 w-[100%] lg:w-[32%] md:w-[32%] flex flex-col border mb-4 ${themeColor}`}
@@ -30,7 +33,13 @@ const AICards = () => {
         <p className="text-[12px] ml-4 w-[100%] lg:w-[80%] md:w-[80%]">
           Play desired sound to express your mood
         </p>
-        <img src={playImg} alt="" className="w-[110px] ml-auto" />
+        <Image
+          src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604686/play_ftvnf8.svg"
+          alt="play illustration"
+          width={50}
+          height={50}
+          className="w-[70%] ml-auto"
+        />
       </div>
       <div
         className={`rounded-[30px] p-6 w-[100%] lg:w-[32%] md:w-[32%] flex flex-col border mb-4 ${themeColor}`}
@@ -42,7 +51,13 @@ const AICards = () => {
         <p className="text-[12px] ml-4 w-[100%] lg:w-[80%] md:w-[80%]">
           Let’s talk about whar’s on your mind.
         </p>
-        <img src={mintImg} alt="" className="w-[110px] ml-auto" />
+        <Image
+          src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604685/mint_vgmzdu.svg"
+          alt="mint illustration"
+          width={50}
+          height={50}
+          className="w-[70%] ml-auto"
+        />
       </div>
     </div>
   );

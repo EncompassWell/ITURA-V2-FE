@@ -25,3 +25,7 @@ body {
 .accordion-card:nth-child(5) {
   border-bottom: 0;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

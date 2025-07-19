@@ -1,4 +1,5 @@
-import { div } from 'framer-motion/client';
+"use client"
+
 import React, { useState, useEffect } from 'react';
 import { FaCircleDot } from "react-icons/fa6";
 
@@ -21,7 +22,7 @@ const MoodBoard = () => {
         <div
           key={listedDay}
           className={`flex flex-col items-center lg:px-4 md:px-2 px-1 py-2 rounded-xl 
-            ${listedDay === currentDay ? 'bg-orange-500 text-white lg:py-4 md:py-4 py-2 rounded-[22px]' : 'bg-transparent text-white'}`}
+            ${listedDay === currentDay ? 'bg-orange text-white lg:py-4 md:py-4 py-2 rounded-[22px]' : 'bg-transparent text-white'}`}
         >
           <FaCircleDot className={`mb-1 lg:text-2xl md:text-xl text-lg ${listedDay === currentDay ? 'text-white' : 'text-orange'}`} />
           <p className="text-[9px] lg:text-[16px] md:text-[16px] font-medium">{listedDay}</p>

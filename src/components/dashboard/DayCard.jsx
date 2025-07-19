@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import dayjs from "dayjs";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { div } from "framer-motion/client";
 
 const DayCard = () => {
   const [currentDate, setCurrentDate] = useState(dayjs());

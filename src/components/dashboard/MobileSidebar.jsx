@@ -1,13 +1,14 @@
+"use client"
+
 import React, { useState, useEffect } from "react";
-import { IoSettingsOutline } from "react-icons/io5";
+import { IoSettingsOutline, IoLibrary } from "react-icons/io5";
 import { Divide as Hamburger } from "hamburger-react";
-import { IoLibrary } from "react-icons/io5";
-import { TbSmartHome } from "react-icons/tb";
-import { TbHelpSquare } from "react-icons/tb";
+import { TbSmartHome, TbHelpSquare } from "react-icons/tb";
 import { GiOpenPalm } from "react-icons/gi";
 import { LuMessageCircle } from "react-icons/lu";
-import { NavLink, Link } from "react-router-dom";
-import logo from "../../assets/logo.svg";
+import Link from "next/link";
+import Image from "next/image";
+
 
 const MobileSidebar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -46,70 +47,76 @@ const MobileSidebar = () => {
         />
         {isOpen && (
           <div className="bg-darkBg absolute top-20 w-[70%] border rounded-[21px] border-white/20 p-6">
-            <NavLink
-              to="/dashboard"
+            <Link
+              href="/dashboard"
               className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
               style={({ isActive }) => (isActive ? activeStyle : null)}
               end
             >
               <TbSmartHome className="mr-2 text-2xl" />
               Dashboard
-            </NavLink>
-            <NavLink
-              to="journal"
+            </Link>
+            <Link
+              href="journal"
               className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
               style={({ isActive }) => (isActive ? activeStyle : null)}
             >
               <LuMessageCircle className="mr-2 text-2xl" />
               Journal
-            </NavLink>
-            <NavLink
-              to="library"
+            </Link>
+            <Link
+              href="library"
               className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
               style={({ isActive }) => (isActive ? activeStyle : null)}
             >
               <IoLibrary className="mr-2 text-2xl" />
               Library
-            </NavLink>
-            <NavLink
-              to="oracle-reading"
+            </Link>
+            <Link
+              href="oracle-reading"
               className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
               style={({ isActive }) => (isActive ? activeStyle : null)}
             >
               <GiOpenPalm className="mr-2 text-2xl" />
               Oracle Readings
-            </NavLink>
+            </Link>
             <div className="border-t border-white/30 mb-10 mt-4 py-6">
-              <NavLink
-                to="settings"
+              <Link
+                href="settings"
                 className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
                 style={({ isActive }) => (isActive ? activeStyle : null)}
               >
                 <IoSettingsOutline className="mr-2 text-2xl" />
                 Setting
-              </NavLink>
-              <NavLink
-                to="help"
+              </Link>
+              <Link
+                href="help"
                 className="text-[13px] flex items-center mb-2 py-4 px-4 font-medium"
                 style={({ isActive }) => (isActive ? activeStyle : null)}
               >
                 <TbHelpSquare className="mr-2 text-2xl" />
                 Help
-              </NavLink>
-              <NavLink
-                to="support"
+              </Link>
+              <Link
+                href="support"
                 className="text-[13px] flex items-center py-4 px-4 font-medium"
                 style={({ isActive }) => (isActive ? activeStyle : null)}
               >
                 <TbHelpSquare className="mr-2 text-2xl" />
                 Get Pro Support
-              </NavLink>
+              </Link>
             </div>
           </div>
         )}
-        <NavLink to="/">
-          <img src={logo} alt="" className="w-[60px] h-[60px]" />
-        </NavLink>
+        <Link href="/">
+          <Image
+            src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604683/logo_jpexvw.svg"
+            alt="Itura's logo"
+            width={50}
+            height={50}
+            className="w-[100%]"
+          />
+        </Link>
       </div>
       {scrolled && (
         <div
@@ -123,71 +130,76 @@ const MobileSidebar = () => {
           />
           {isOpen && (
             <div className="bg-darkBg absolute top-20 w-[70%] border rounded-[21px] border-white/20 p-6">
-              <NavLink
-                to="/dashboard"
+              <Link
+                href="/dashboard"
                 className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
                 style={({ isActive }) => (isActive ? activeStyle : null)}
                 end
               >
                 <TbSmartHome className="mr-2 text-2xl" />
                 Dashboard
-              </NavLink>
-              <NavLink
-                to="journal"
+              </Link>
+              <Link
+                href="journal"
                 className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
                 style={({ isActive }) => (isActive ? activeStyle : null)}
               >
                 <LuMessageCircle className="mr-2 text-2xl" />
                 Journal
-              </NavLink>
-              <NavLink
-                to="library"
+              </Link>
+              <Link
+                href="library"
                 className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
                 style={({ isActive }) => (isActive ? activeStyle : null)}
               >
                 <IoLibrary className="mr-2 text-2xl" />
                 Library
-              </NavLink>
-              <NavLink
-                to="oracle-reading"
+              </Link>
+              <Link
+                href="oracle-reading"
                 className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
                 style={({ isActive }) => (isActive ? activeStyle : null)}
               >
                 <GiOpenPalm className="mr-2 text-2xl" />
                 Oracle Readings
-              </NavLink>
+              </Link>
               <div className="border-t border-white/30 mb-10 mt-4 py-6">
-                <NavLink
-                  to="settings"
+                <Link
+                  href="settings"
                   className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
                   style={({ isActive }) => (isActive ? activeStyle : null)}
                 >
                   <IoSettingsOutline className="mr-2 text-2xl" />
                   Setting
-                </NavLink>
-                <NavLink
-                  to="help"
+                </Link>
+                <Link
+                  href="help"
                   className="text-[13px] flex items-center mb-2 py-4 px-4 font-medium"
                   style={({ isActive }) => (isActive ? activeStyle : null)}
                 >
                   <TbHelpSquare className="mr-2 text-2xl" />
                   Help
-                </NavLink>
-                <NavLink
-                  to="support"
+                </Link>
+                <Link
+                  href="support"
                   className="text-[13px] flex items-center py-4 px-4 font-medium"
                   style={({ isActive }) => (isActive ? activeStyle : null)}
                 >
                   <TbHelpSquare className="mr-2 text-2xl" />
                   Get Pro Support
-                </NavLink>
+                </Link>
               </div>
-              <div></div>
             </div>
           )}
-          <NavLink to="/">
-            <img src={logo} alt="" className="w-[60px] h-[60px]" />
-          </NavLink>
+          <Link href="/">
+          <Image
+            src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604683/logo_jpexvw.svg"
+            alt="Itura's logo"
+            width={50}
+            height={50}
+            className="w-[100%]"
+          />
+        </Link>
         </div>
       )}
     </div>

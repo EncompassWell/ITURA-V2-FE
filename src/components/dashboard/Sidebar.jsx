@@ -1,100 +1,120 @@
-import { IoSettingsOutline } from "react-icons/io5";
-import { IoLibrary } from "react-icons/io5";
-import { TbSmartHome } from "react-icons/tb";
-import { TbHelpSquare } from "react-icons/tb";
+"use client";
+
+import { IoSettingsOutline, IoLibrary } from "react-icons/io5";
+import { TbSmartHome, TbHelpSquare } from "react-icons/tb";
 import { GiOpenPalm } from "react-icons/gi";
 import { LuMessageCircle } from "react-icons/lu";
-import { NavLink, Link } from "react-router-dom";
-import logo from "../../assets/logo.svg";
-import ravatarImg from "../../assets/ravatar.svg";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
-  const themeColor = "bg-white/15 border-white/20"
-
-  const activeStyle = {
-    background: "#FFFFFF26",
-    borderRadius: "10px",
-    color: "#FFF",
-    width: "100%",
-    padding: "20px",
-  };
+  const themeColor = "bg-white/15 border-white/20";
+  const currentPath = usePathname();
+ 
+  const isActive = (path) =>
+    currentPath === path ? "bg-white/10 rounded-[10px] border border-white/10 shadow-lg p-2" : "";
 
   return (
-    <div className={`w-[20%] text-white p-8 py-12 h-[100vh] hidden lg:flex md:flex flex-col border-r border-white/10 overflow-y-scroll lg:max-h-[982px] md:max-h-[960px] ${themeColor}`}>
-      <NavLink to='/'><img src={logo} alt="logo" className="mb-20 w-[55px]" /></NavLink>
+    <div
+      className={`w-[20%] text-white p-8 py-12 h-[100vh] hidden lg:flex md:flex flex-col border-r border-white/10 overflow-y-scroll lg:max-h-[982px] md:max-h-[960px] no-scrollbar ${themeColor}`}
+    >
+      <Link href="/">
+        <Image
+          src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604683/logo_jpexvw.svg"
+          alt="Itura's logo"
+          width={100}
+          height={100}
+          className="mb-20"
+        />
+      </Link>
       <div className="flex items-center mb-10">
-        <img src={ravatarImg} alt="" className="h-[41px] w-[41px]" />
+        <Image
+          src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604688/ravatar_zs1bzd.svg"
+          alt="User ravatar"
+          width={60}
+          height={60}
+        />
         <p className="text-[12px] ml-3">
           Jo Edor <br />
           <span className="text-white/60">0xe12ewas.......</span>
         </p>
       </div>
-      <NavLink
-        to="/dashboard"
-        className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
-        style={({ isActive }) => (isActive ? activeStyle : null)}
-        end
+      <Link
+        href="/dashboard"
+        className={`text-[13px] flex items-center py-4 mb-2 px-4 font-medium ${isActive(
+          "/dashboard"
+        )}`}
       >
         <TbSmartHome className="mr-2 text-2xl" />
         Dashboard
-      </NavLink>
-      <NavLink
-        to="journal"
-        className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
-        style={({ isActive }) => (isActive ? activeStyle : null)}
+      </Link>
+      <Link
+        href="/dashboard/journal"
+        className={`text-[13px] flex items-center py-4 mb-2 px-4 font-medium ${isActive(
+          "/dashboard/journal"
+        )}`}
       >
         <LuMessageCircle className="mr-2 text-2xl" />
         Journal
-      </NavLink>
-      <NavLink
-        to="library"
-        className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
-        style={({ isActive }) => (isActive ? activeStyle : null)}
+      </Link>
+      <Link
+        href="/dashboard/library"
+        className={`text-[13px] flex items-center py-4 mb-2 px-4 font-medium ${isActive(
+          "/dashboard/library"
+        )}`}
       >
         <IoLibrary className="mr-2 text-2xl" />
         Library
-      </NavLink>
-      <NavLink
-        to="oracle-reading"
-        className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
-        style={({ isActive }) => (isActive ? activeStyle : null)}
+      </Link>
+      <Link
+        href="/dashboard/oracle-reading"
+        className={`text-[13px] flex items-center py-4 mb-2 px-4 font-medium ${isActive(
+          "/dashboard/oracle-reading"
+        )}`}
       >
         <GiOpenPalm className="mr-2 text-2xl" />
-       Oracle Readings
-      </NavLink>
+        Oracle Readings
+      </Link>
       <div className="border-t border-b border-white/30 mb-10 mt-4 py-6">
-        <NavLink
-          to="settings"
-          className="text-[13px] flex items-center py-4 mb-2 px-4 font-medium"
-          style={({ isActive }) => (isActive ? activeStyle : null)}
+        <Link
+          href="/dashboard/settings"
+          className={`text-[13px] flex items-center py-4 mb-2 px-4 font-medium ${isActive(
+            "/dashboard/settings"
+          )}`}
         >
           <IoSettingsOutline className="mr-2 text-2xl" />
           Setting
-        </NavLink>
-        <NavLink
-          to="help"
-          className="text-[13px] flex items-center mb-2 py-4 px-4 font-medium"
-          style={({ isActive }) => (isActive ? activeStyle : null)}
+        </Link>
+        <Link
+          href="/dashboard/help"
+          className={`text-[13px] flex items-center mb-2 py-4 px-4 font-medium ${isActive(
+            "/dashboard/help"
+          )}`}
         >
           <TbHelpSquare className="mr-2 text-2xl" />
           Help
-        </NavLink>
-        <NavLink
-          to="support"
-          className="text-[13px] flex items-center py-4 px-4 font-medium"
-          style={({ isActive }) => (isActive ? activeStyle : null)}
+        </Link>
+        <Link
+          href="/dashboard/support"
+          className={`text-[13px] flex items-center py-4 px-4 font-medium"
+   ${isActive("/dashboard/support")}`}
         >
           <TbHelpSquare className="mr-2 text-2xl" />
           Get Pro Support
-        </NavLink>
+        </Link>
       </div>
       <div>
-        <Link to='/dashboard/history'><h2 className="lg:text-[24px] md:text-[24px] text-[18px] font-instrumentSerif italic">
-          History
-        </h2></Link>
+        <Link href="/dashboard/history">
+          <h2 className="lg:text-[24px] md:text-[24px] text-[18px] font-instrumentSerif italic">
+            History
+          </h2>
+        </Link>
         <div className="my-4">
-            <p className="font-medium text-[12px]">Music matching for mood</p>
-            <p className="text-[10px]">Slow cool music for feeling very sad about my....</p>
+          <p className="font-medium text-[12px]">Music matching for mood</p>
+          <p className="text-[10px]">
+            Slow cool music for feeling very sad about my....
+          </p>
         </div>
       </div>
     </div>

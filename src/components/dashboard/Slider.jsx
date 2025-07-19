@@ -1,16 +1,43 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const data = [
-  { id: 1, title: "Mindfulness & Stress", icon: "./1.svg" },
-  { id: 2, title: "Daily Productivity", icon: "./2.svg" },
-  { id: 3, title: "Health Tips", icon: "./3.svg" },
-  { id: 4, title: "Career Advice", icon: "./4.svg" },
-  { id: 5, title: "Travel Recommendations", icon: "./5.svg" },
-  { id: 6, title: "Calming Tunes", icon: "./3.svg" },
+  {
+    id: 1,
+    title: "Mindfulness & Stress",
+    icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604820/1_xgearo.svg",
+  },
+  {
+    id: 2,
+    title: "Daily Productivity",
+    icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604821/2_xt53cr.svg",
+  },
+  {
+    id: 3,
+    title: "Health Tips",
+    icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604822/3_lzy8je.svg",
+  },
+  {
+    id: 4,
+    title: "Career Advice",
+    icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604823/4_xfqwiy.svg",
+  },
+  {
+    id: 5,
+    title: "Travel Recommendations",
+    icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604823/5_vbejri.svg",
+  },
+  {
+    id: 6,
+    title: "Calming Tunes",
+    icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604822/3_lzy8je.svg",
+  },
 ];
 
-const Slider = ()  => {
+const Slider = () => {
   const [visibleCount, setVisibleCount] = useState(3);
   const [startIndex, setStartIndex] = useState(0);
   const themeColor = "bg-white/5 border-white/10";
@@ -42,7 +69,13 @@ const Slider = ()  => {
             <div className="flex items-center">
               <p>{card.id}. </p>
               <div className={`rounded-full p-2 mx-4 border ${themeColor}`}>
-              <img src={card.icon} alt="" />
+                <Image
+                  src={card.icon}
+                  alt={card.title}
+                  width={20}
+                  height={20}
+                  className="w-[100%] ml-auto"
+                />
               </div>
               <p className="text-[14px]">{card.title}</p>
             </div>
@@ -51,6 +84,6 @@ const Slider = ()  => {
       </motion.div>
     </div>
   );
-}
+};
 
 export default Slider;

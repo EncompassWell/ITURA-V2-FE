@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "dayjs": "^1.11.13",
+    "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.6",
     "hamburger-react": "^2.5.2",
     "lottie-react": "^2.4.1",
