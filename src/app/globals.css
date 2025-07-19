@@ -21,3 +21,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.accordion-card:nth-child(5) {
+  border-bottom: 0;
+}

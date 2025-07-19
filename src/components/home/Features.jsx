@@ -67,14 +67,13 @@ const Features = () => {
           </div>
         </div>
       <div className="flex justify-between flex-col lg:flex-row md:flex-row mt-4 items-center">
-        <div className="lg:w-[44%] md:w-[44%] w-[100%] mb-4">
+        <div className="lg:w-[40%] md:w-[38%] w-[100%] mb-4">
             <Lottie
               animationData={featureAnimation}
               loop={true}
               style={{
                 width: "100%",
                 height: "100%",
-                padding: 0,
               }}
             />
         </div>

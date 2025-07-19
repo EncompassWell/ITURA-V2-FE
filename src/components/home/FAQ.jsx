@@ -4,7 +4,6 @@ import { TiPlus } from "react-icons/ti";
 import { motion, AnimatePresence } from "framer-motion";
 
 const FAQ = () => {
-  const bgClass = "bg-white/10";
   const [openFaqId, setOpenFaqId] = useState(null);
   const questions = [
     {
@@ -50,7 +49,7 @@ const FAQ = () => {
         <span className="font-instrumentSerif italic">Answered</span>.
       </h2>
       <div
-        className={`rounded-[21px] lg:py-20 md:py-20 lg:px-12 md:px-10 p-6 relative ${bgClass}`}
+        className={'rounded-[21px] lg:py-20 md:py-20 lg:px-12 md:px-10 p-6 relative bg-white/10'}
       >
         {questions.map((info) => (
           <div
@@ -95,8 +94,8 @@ const FAQ = () => {
           </div>
         ))}
         <div>
-          <div className="w-[180px] h-[90px] lg:w-[200px] lg:h-[100px] md:w-[200px] md:h-[100px] bg-linear-to-b from-gradientYellow to-gradientRed  rounded-bl-full blur-[150px] rounded-br-full shadow-xl absolute lg:left-20 md:left-20 left-0 top-20 z-0"></div>
-          <div className="w-[180px] h-[90px] lg:w-[200px] lg:h-[120px] md:w-[200px] md:h-[100px] bg-linear-to-b from-gradientYellow to-gradientRed rounded-bl-full rounded-br-full shadow-xl absolute lg:right-20 md:right-20 right-0 bottom-0 rotate-180 blur-[100px]"></div>
+          <div className="w-[180px] h-[90px] lg:w-[200px] lg:h-[100px] md:w-[200px] md:h-[100px] bg-gradient-to-b from-gradientYellow to-gradientRed  rounded-bl-full blur-[150px] rounded-br-full shadow-xl absolute lg:left-20 md:left-20 left-0 top-20 z-0"></div>
+          <div className="w-[180px] h-[90px] lg:w-[200px] lg:h-[120px] md:w-[200px] md:h-[100px] bg-gradient-to-b from-gradientYellow to-gradientRed rounded-bl-full rounded-br-full shadow-xl absolute lg:right-20 md:right-20 right-0 bottom-0 rotate-180 blur-[100px]"></div>
         </div>
       </div>
     </div>

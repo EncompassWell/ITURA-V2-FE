@@ -6,7 +6,7 @@ const OverviewCard = () => {
 
   return (
     <div
-      className={`lg:w-[55%] md:w-[55%] w-[100%] border border-white/5 rounded-[21px] lg:pt-10 md:pt-10 pt-6 relative pb-8 ${themeColor}`}
+      className={`lg:w-[58%] md:w-[60%] w-[100%] border border-white/5 rounded-[21px] lg:pt-16 md:pt-10 pt-6 relative  ${themeColor}`}
     >
       <div className="lg:px-12 md:px-10 px-6">
         <h3 className="text-[22px] bg-gradient-to-b from-[#F5F4F7] via-[#F3F2F5] to-[#B0ADBF] inline-block text-transparent bg-clip-text lg:text-[28px] md:text-[28px] font-medium">
@@ -17,8 +17,8 @@ const OverviewCard = () => {
           insights that bring balance to your mind.
         </p>
       </div>
-      <div className="bg-[#271E33] lg:p-8 md:p-8 p-6 rounded-tr-[21px] rounded-tl-[21px] rounded-br-[21px] border border-white/10 mt-6 lg:ml-12 md:ml-10 ml-6 flex flex-col">
-        <div className="flex justify-between items-center my-3">
+      <div className="bg-[#271E33] lg:p-8 md:p-8 p-6 rounded-tr-[21px] rounded-tl-[21px] rounded-br-[21px] border border-white/10 mt-10 lg:ml-14 md:ml-10 ml-6 flex flex-col">
+        <div className="flex justify-between items-center my-5">
           <MdOutlineArrowBackIosNew />
           <p className="font-semibold">Itura</p>
           <FaRegEdit />
@@ -47,7 +47,7 @@ const OverviewCard = () => {
                 <span className="text-[13px] font-medium">
                   Use Active Learning Techniques
                 </span>
-                <p className="mt-3 text-[10px]">
+                <p className="mt-5 text-[10px]">
                   Talk every day: Practice speaking even if it's just with
                   yourself or use apps like app to talk to a native speaker.
                   Write every day: Try writing a simple journal in the language.
@@ -57,7 +57,7 @@ const OverviewCard = () => {
           </div>
         </div>
       </div>
-        <div className="w-[220px] h-[220px] bg-linear-to-b from-gradientYellow to-gradientRed blur-[150px] rounded-full absolute left-1/2 top-20 transform -translate-x-1/2 z-10"></div>
+        <div className="w-[220px] h-[220px] bg-gradient-to-b from-gradientYellow to-gradientRed blur-[150px] rounded-full absolute left-1/2 top-20 transform -translate-x-1/2 z-10"></div>
     </div>
   );
 };

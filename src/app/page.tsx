@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div className="relative">
       <Header />
-      <div className="lg:w-[706px] md:w-[600px] w-[380px] lg:h-[353px] md:h-[300px] h-[190px] bg-linear-to-b from-gradientYellow to-gradientRed blur-[315px] rounded-bl-full rounded-br-full absolute left-1/2 top-0 transform -translate-x-1/2 z-10"></div>
+      <div className="lg:w-[706px] md:w-[600px] w-[380px] lg:h-[353px] md:h-[300px] h-[190px] bg-gradient-to-b from-gradientYellow to-gradientRed blur-[315px] rounded-bl-full rounded-br-full absolute left-1/2 top-0 transform -translate-x-1/2 z-10"></div>
       <Hero />
       <Partner />
       <TopArt />

@@ -104,8 +104,9 @@ const CarouselFeatures = () => {
             <Image
               src={slideItem[activeIndex].image}
               alt="Active feature"
-              fill
-              className="w-full h-auto rounded-xl"
+              width={300}
+              height={300}
+              className="w-[100%] rounded-xl"
             />
           </div>
           <div className="lg:w-[58%] md:w-[64%] lg:flex md:flex hidden flex-wrap justify-between relative">
