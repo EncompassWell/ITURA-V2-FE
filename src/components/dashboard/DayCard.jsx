@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react";
 import dayjs from "dayjs";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
