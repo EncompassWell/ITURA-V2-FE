@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className='font-inter max-w-[1512px] mx-auto'
+        className='font-inter max-w-[1560px] mx-auto'
       >
         {children}
       </body>

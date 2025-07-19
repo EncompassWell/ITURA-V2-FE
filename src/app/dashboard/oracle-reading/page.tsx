@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ProSupport = () => {
+const OracleReading = () => {
   return (
     <div>page</div>
   )
 }
 
-export default ProSupport
+export default OracleReading
