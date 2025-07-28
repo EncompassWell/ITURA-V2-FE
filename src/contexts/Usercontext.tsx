@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useAccount, useConnect, useDisconnect } from "@starknet-react/core";
 import { ControllerConnector } from "@cartridge/connector";
+import { Connector } from "@starknet-react/core";
 
 // Define types to avoid direct imports that cause SSR issues
 type SessionAccountInterface = any;
@@ -28,7 +29,7 @@ interface StarknetContextType {
   // handleConnect: () => Promise<void>;
   setAddress: (address: String | undefined) => void;
   username: string | undefined;
-  handleConnect: () => Promise<void>;
+  handleConnect: (connector: Connector) => Promise<void>;
 }
 
 export const StarknetContext = createContext<StarknetContextType>(
@@ -74,10 +75,10 @@ export const StarknetContextProvider = ({
 
   // set the cartrige controller
 
-  useEffect(() => {
-    setAddress(cartridgeAddress);
-    setAccount(cartridgeAccount);
-  }, [status]);
+//   useEffect(() => {
+//     setAddress(cartridgeAddress);
+//     setAccount(cartridgeAccount);
+//   }, [status]);
 
   const handleClearSession = async () => {
     try {

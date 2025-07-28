@@ -64,7 +64,7 @@ const ConnectWallet = ({showMobileNav}: any) => {
            >
              <div className="w-[40px] h-[40px] rounded-full bg-white/5 border border-white/10 flex justify-center items-center p-2 mr-4">
                <img
-                 src={connector.icon}
+                 src={typeof connector.icon === 'string' ? connector.icon : connector.icon.dark}
                  alt={`${connector.name} logo`}
                  className="w-[30px] h-[30px]"
                />
