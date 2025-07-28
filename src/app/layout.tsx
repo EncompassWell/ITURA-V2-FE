@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import { Toaster } from "sonner";
+import dynamic from "next/dynamic";
+import { RpcProvider } from "starknet";
+const StarknetContextProvider = dynamic(
+  () =>
+    import("@/contexts/Usercontext").then((mod) => mod.StarknetContextProvider),
+  { ssr: false }
+);
+const StarknetProvider = dynamic(
+  () =>
+    import("@/components/StarknetProvider").then((mod) => mod.StarknetProvider),
+  { ssr: false }
+);
 
 export const metadata: Metadata = {
   title: "Itura",
@@ -14,10 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className='font-inter max-w-[1560px] mx-auto'
-      >
-        {children}
+      <body className="font-inter max-w-[1560px] mx-auto">
+        <StarknetProvider>
+          <StarknetContextProvider>
+            {children}
+            <Toaster richColors={true} position="top-right" />
+          </StarknetContextProvider>
+        </StarknetProvider>
       </body>
     </html>
   );
