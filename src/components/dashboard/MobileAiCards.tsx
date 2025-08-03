@@ -12,21 +12,30 @@ const MobileAiCards = () => {
     containScroll: false,
   });
 
-  const autoplayInterval = useRef(null);
+  const autoplayInterval = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     if (!emblaApi) return;
-
+  
     autoplayInterval.current = setInterval(() => {
       emblaApi.scrollNext();
     }, 3000);
-
+  
     return () => {
-      clearInterval(autoplayInterval.current);
+      if (autoplayInterval.current !== null) {
+        clearInterval(autoplayInterval.current);
+      }
     };
   }, [emblaApi]);
 
-  const cards = [
+  interface Cards {
+    title: string;
+    subtitle: string;
+    description: string;
+    img: string;
+  }
+
+  const cards:Cards[] = [
     {
       title: "Create",
       subtitle: "Art",

@@ -6,7 +6,14 @@ import featureAnimation from "@/constants/feature.json";
 const Features = () => {
   const bgClass = "bg-white/10";
 
-  const data = [
+  interface Data {
+    id: number;
+    image: string;
+    title: string;
+    text: string;
+  }
+
+  const data:Data[] = [
     {
       id: 1,
       image: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604819/img-1_wuj6aw.svg",

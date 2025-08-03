@@ -6,7 +6,13 @@ import markImg from "../../assets/marklogo.svg";
 import ravatar from "../../assets/avatar.svg";
 import { NavLink } from "react-router-dom";
 
-const messages = [
+interface Messages {
+  type: string;
+  sender: string;
+  content: any;
+}
+
+const messages: Messages[] = [
   { type: "text", sender: "ai", content: "Hello! How can I assist you?" },
   {
     type: "text",
@@ -36,9 +42,13 @@ const ChatRes = () => {
   );
 };
 
-const ChatMessage = ({ message }) => {
-  const themeColor = "bg-white/10 border-white/20"
-  
+interface ChatMessageProps {
+  message: Messages;
+}
+
+const ChatMessage = ({ message }: ChatMessageProps) => {
+  const themeColor = "bg-white/10 border-white/20";
+
   const isUser = message.sender === "user";
   const alignment = isUser ? "justify-end" : "justify-start";
   const bubbleAlign = isUser ? "items-end text-right" : "items-start text-left";

@@ -7,12 +7,13 @@ import { LuMessageCircle } from "react-icons/lu";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import ProtectedRoute from "./ProtectedRoutes";
 
 const Sidebar = () => {
   const themeColor = "bg-white/15 border-white/20";
   const currentPath = usePathname();
  
-  const isActive = (path) =>
+  const isActive = (path:any) =>
     currentPath === path ? "bg-white/10 rounded-[10px] border border-white/10 shadow-lg p-2" : "";
 
   return (
@@ -49,6 +50,7 @@ const Sidebar = () => {
         <TbSmartHome className="mr-2 text-2xl" />
         Dashboard
       </Link>
+      <ProtectedRoute>
       <Link
         href="/dashboard/journal"
         className={`text-[13px] flex items-center py-4 mb-2 px-4 font-medium ${isActive(
@@ -116,7 +118,9 @@ const Sidebar = () => {
             Slow cool music for feeling very sad about my....
           </p>
         </div>
+
       </div>
+      </ProtectedRoute>
     </div>
   );
 };

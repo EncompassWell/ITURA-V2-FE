@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Element } from "react-scroll";
 import Image from "next/image";
 
 const CarouselFeatures = () => {
-  const slideItem = [
+  interface SlideItem {
+    id: number;
+    title: string;
+    image: string;
+    icon: string;
+    details: String;
+  }
+  
+  const slideItem: SlideItem[] = [
     {
       id: 1,
       title: "Remix Your Mind, Reimagine Your Art",
@@ -70,7 +77,8 @@ const CarouselFeatures = () => {
   }, []);
 
   return (
-    <Element name="feature">
+    // <Element name="feature">
+    <>
       <div className="w-[90%] mx-auto lg:my-40 md:my-30 my-10 hidden lg:block md:block">
         <div className="flex text-center justify-center items-center mb-12">
           <div
@@ -165,7 +173,8 @@ const CarouselFeatures = () => {
           </div>
         ))}
       </div>
-    </Element>
+      </>
+    // </Element>
   );
 };
 

@@ -5,7 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const FAQ = () => {
   const [openFaqId, setOpenFaqId] = useState(null);
-  const questions = [
+  interface Questions {
+    id: number;
+    question: string;
+    answer: string;
+  }
+  const questions:Questions[] = [
     {
       id: 1,
       question: "Is Itura free to use?",
@@ -38,7 +43,7 @@ const FAQ = () => {
     },
   ];
 
-  const handleOpen = (id) => {
+  const handleOpen = (id:any) => {
     setOpenFaqId((prev) => (prev === id ? null : id));
   };
 

@@ -4,43 +4,49 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const data = [
-  {
-    id: 1,
-    title: "Mindfulness & Stress",
-    icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604820/1_xgearo.svg",
-  },
-  {
-    id: 2,
-    title: "Daily Productivity",
-    icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604821/2_xt53cr.svg",
-  },
-  {
-    id: 3,
-    title: "Health Tips",
-    icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604822/3_lzy8je.svg",
-  },
-  {
-    id: 4,
-    title: "Career Advice",
-    icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604823/4_xfqwiy.svg",
-  },
-  {
-    id: 5,
-    title: "Travel Recommendations",
-    icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604823/5_vbejri.svg",
-  },
-  {
-    id: 6,
-    title: "Calming Tunes",
-    icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604822/3_lzy8je.svg",
-  },
-];
-
 const Slider = () => {
   const [visibleCount, setVisibleCount] = useState(3);
   const [startIndex, setStartIndex] = useState(0);
   const themeColor = "bg-white/5 border-white/10";
+
+  interface Data {
+    id: number;
+    title: string;
+    icon: string;
+  }
+  
+  const data:Data[] = [
+    {
+      id: 1,
+      title: "Mindfulness & Stress",
+      icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604820/1_xgearo.svg",
+    },
+    {
+      id: 2,
+      title: "Daily Productivity",
+      icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604821/2_xt53cr.svg",
+    },
+    {
+      id: 3,
+      title: "Health Tips",
+      icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604822/3_lzy8je.svg",
+    },
+    {
+      id: 4,
+      title: "Career Advice",
+      icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604823/4_xfqwiy.svg",
+    },
+    {
+      id: 5,
+      title: "Travel Recommendations",
+      icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604823/5_vbejri.svg",
+    },
+    {
+      id: 6,
+      title: "Calming Tunes",
+      icon: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604822/3_lzy8je.svg",
+    },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {

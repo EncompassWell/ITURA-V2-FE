@@ -1,6 +1,6 @@
 "use client"
 
-import Header from "@/components/home/Header"
+import Header from "@/components/home/Header";
 import Link from "next/link";
 import Image from "next/image";
 
