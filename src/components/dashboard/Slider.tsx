@@ -3,17 +3,12 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Data } from "../shared/interface";
 
 const Slider = () => {
   const [visibleCount, setVisibleCount] = useState(3);
   const [startIndex, setStartIndex] = useState(0);
   const themeColor = "bg-white/5 border-white/10";
-
-  interface Data {
-    id: number;
-    title: string;
-    icon: string;
-  }
   
   const data:Data[] = [
     {

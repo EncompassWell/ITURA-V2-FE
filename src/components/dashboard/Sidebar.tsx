@@ -50,7 +50,6 @@ const Sidebar = () => {
         <TbSmartHome className="mr-2 text-2xl" />
         Dashboard
       </Link>
-      <ProtectedRoute>
       <Link
         href="/dashboard/journal"
         className={`text-[13px] flex items-center py-4 mb-2 px-4 font-medium ${isActive(
@@ -120,7 +119,6 @@ const Sidebar = () => {
         </div>
 
       </div>
-      </ProtectedRoute>
     </div>
   );
 };

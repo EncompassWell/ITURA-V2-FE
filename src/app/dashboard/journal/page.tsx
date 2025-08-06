@@ -2,12 +2,14 @@ import React from "react";
 import { FiCamera, FiFolderMinus } from "react-icons/fi";
 import { CiImageOn } from "react-icons/ci";
 import { MdArrowUpward } from "react-icons/md";
+import ProtectedRoute from "@/components/dashboard/ProtectedRoutes";
 // import ChatRes from "@/components/dashboard/ChatRes";
 
 const Journal = () => {
   const themeColor = "bg-white/15 border-white/20";
 
   return (
+    <ProtectedRoute>
     <main className="flex flex-col lg:min-h-[80vh] md:min-h-[80vh] min-h-[90vh]">
       {/* <section
         className={`lg:w-[80%] md:w-[80%] w-[90%] mx-auto`}
@@ -55,6 +57,7 @@ const Journal = () => {
         </div>
       </section>
     </main>
+    </ProtectedRoute>
   );
 };
 

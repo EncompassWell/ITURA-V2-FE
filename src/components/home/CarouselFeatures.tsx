@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { SlideItem } from "../shared/interface";
 
-const CarouselFeatures = () => {
-  interface SlideItem {
-    id: number;
-    title: string;
-    image: string;
-    icon: string;
-    details: String;
-  }
-  
+const CarouselFeatures = () => {  
   const slideItem: SlideItem[] = [
     {
       id: 1,

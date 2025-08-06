@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { GoDotFill } from "react-icons/go";
 import Image from "next/image";
+import { Cards } from '../shared/interface'
 
 const MobileAiCards = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -27,13 +28,6 @@ const MobileAiCards = () => {
       }
     };
   }, [emblaApi]);
-
-  interface Cards {
-    title: string;
-    subtitle: string;
-    description: string;
-    img: string;
-  }
 
   const cards:Cards[] = [
     {
