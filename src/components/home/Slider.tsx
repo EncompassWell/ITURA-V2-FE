@@ -14,7 +14,7 @@ const slides = [
 
 const total = slides.length;
 const radius = 1000;
-const degreesPerSlide = 22;
+const degreesPerSlide = 360 / 14;
 const intervalTime = 2500;
 
 const Slider = () => {
@@ -57,7 +57,7 @@ const Slider = () => {
                   alt={`art-${actualIndex}`}
                   width={400}
                   height={400}
-                  className="w-[200px] h-[300px] object-cover rounded-2xl shadow-md"
+                  className="w-[200px] h-[300px] object-cover rounded-[30px] shadow-md"
                 />
               </motion.div>
             );

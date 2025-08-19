@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-inter max-w-[1560px] mx-auto">
+      <body className="font-inter max-w-[1550px] mx-auto w-[100%]">
         <StarknetProvider>
           <StarknetContextProvider>
             {children}

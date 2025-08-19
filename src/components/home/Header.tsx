@@ -37,15 +37,15 @@ const Header = () => {
               className="w-[100%]"
             />
           </Link>
-          <nav>
+          <nav className="w-[50%] flex justify-between">
             <Link href="feature">Features</Link>
-            <Link href="" className="mr-4">
+            <Link href="">
               How it Works
             </Link>
-            <Link href="" className="mr-4">
+            <Link href="">
               Forum
             </Link>
-            <Link href="" className="mr-4">
+            <Link href="">
               Blog
             </Link>
             <a href="mailto:info@itura.org">Contact</a>

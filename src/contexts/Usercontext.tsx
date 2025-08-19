@@ -1,33 +1,28 @@
-"use client";
+'use client';
 
-import { createContext, useState, useEffect, ReactNode } from "react";
-import abi from "../Abis/abi.json";
-import { toast } from "sonner";
-import { useRouter } from "next/navigation";
-import { useAccount, useConnect, useDisconnect } from "@starknet-react/core";
-import { ControllerConnector } from "@cartridge/connector";
-import { Connector } from "@starknet-react/core";
-
-// Define types to avoid direct imports that cause SSR issues
-type SessionAccountInterface = any;
-
-// Dynamically import browser-only modules
-// let argentWebWallet: any = null;
-// let deployAndExecuteWithPaymaster: any = null;
+import { createContext, useState, useEffect, ReactNode } from 'react';
+import abi from '../Abis/abi.json';
+import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
+import {
+  useAccount,
+  useConnect,
+  useDisconnect,
+  Connector,
+} from '@starknet-react/core';
 
 interface StarknetContextType {
   isLoading: boolean;
   setIsLoading: (isLoading: boolean) => void;
-  account: SessionAccountInterface | undefined;
-  setAccount: (account: SessionAccountInterface | undefined) => void;
+  account: any;
+  setAccount: (account: any) => void;
   contractAddr: `0x${string}`;
   abi: any;
   token_addr: `0x${string}`;
-  address: String | undefined;
-  status: "disconnected" | "connected" | "connecting" | "reconnecting";
+  address: string | undefined;
+  status: 'disconnected' | 'connected' | 'connecting' | 'reconnecting';
   handleClearSession: () => Promise<void>;
-  // handleConnect: () => Promise<void>;
-  setAddress: (address: String | undefined) => void;
+  setAddress: (address: string | undefined) => void;
   username: string | undefined;
   handleConnect: (connector: Connector) => Promise<void>;
 }
@@ -40,87 +35,76 @@ interface StarknetProviderProps {
   children: ReactNode;
 }
 
-export const StarknetContextProvider = ({
-  children,
-}: StarknetProviderProps) => {
+export const StarknetContextProvider = ({ children }: StarknetProviderProps) => {
   const { connect, connectors } = useConnect();
   const { disconnect } = useDisconnect();
-  const controller = connectors[0] as ControllerConnector;
+  const router = useRouter();
+
+  const { address, account, status } = useAccount();
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [localAccount, setLocalAccount] = useState<any>();
+  const [localAddress, setLocalAddress] = useState<string | undefined>();
   const [username, setUsername] = useState<string>();
 
-  // () => disconnect()
-  useEffect(() => {
-    if (!address) return;
-    controller.username()?.then((n) => setUsername(n));
-  }, [controller]);
-
-  const router = useRouter();
-  const {
-    address: cartridgeAddress,
-    account: cartridgeAccount,
-    status,
-  } = useAccount();
-  const [isLoading, setIsLoading] = useState(false);
-  const [account, setAccount] = useState<SessionAccountInterface | undefined>(
-    undefined
-  );
-  const [address, setAddress] = useState<String | undefined>(undefined);
-  // const [isClient, setIsClient] = useState(false);
-
-  // Contract Addresses
+  // Contract addresses from env
   const token_addr =
-    (process.env.NEXT_PUBLIC_TOKEN_ADDRESS as `0x${string}`) || "0x0";
+    (process.env.NEXT_PUBLIC_TOKEN_ADDRESS as `0x${string}`) || '0x0';
   const contractAddr =
-    (process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as `0x${string}`) || "0x0";
+    (process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as `0x${string}`) || '0x0';
 
-  // set the cartrige controller
+  // Sync connected account/address into local state (so you can modify them if needed)
+  useEffect(() => {
+    setLocalAccount(account);
+    setLocalAddress(address);
+  }, [account, address]);
 
-//   useEffect(() => {
-//     setAddress(cartridgeAddress);
-//     setAccount(cartridgeAccount);
-//   }, [status]);
+  // Optionally get username if connected via Cartridge
+  useEffect(() => {
+    const controller = connectors.find(
+      (c) => c.id === 'cartridge'
+    ) as any;
 
-  const handleClearSession = async () => {
-    try {
-      disconnect();
-      setAccount(undefined);
-      setAddress(undefined);
-      router.push("/");
-      toast.success("Wallet Disconnected Successfully");
-    } catch (err) {
-      toast.error(`Error disconnecting:${err}`);
+    if (controller && address) {
+      controller.username?.().then((n: string) => setUsername(n));
     }
-  };
+  }, [connectors, address]);
 
-const handleConnect = async (connector: Connector) => {
+  const handleConnect = async (connector: Connector) => {
     try {
-      connect({ connector });
+      await connect({ connector });
     } catch (err) {
       toast.error(`Connection failed: ${err}`);
     }
   };
- 
-  useEffect(() => {
-    if (address && account) {
-      setAddress(address);
-      setAccount(account);
+
+  const handleClearSession = async () => {
+    try {
+      disconnect();
+      setLocalAccount(undefined);
+      setLocalAddress(undefined);
+      setUsername(undefined);
+      router.push('/');
+      toast.success('Wallet Disconnected Successfully');
+    } catch (err) {
+      toast.error(`Error disconnecting: ${err}`);
     }
-  }, [address, account]);
+  };
 
   return (
     <StarknetContext.Provider
       value={{
         isLoading,
         setIsLoading,
-        account,
-        setAccount,
+        account: localAccount,
+        setAccount: setLocalAccount,
         contractAddr,
         abi,
         token_addr,
-        address,
+        address: localAddress,
         status,
         handleClearSession,
-        setAddress,
+        setAddress: setLocalAddress,
         username,
         handleConnect,
       }}

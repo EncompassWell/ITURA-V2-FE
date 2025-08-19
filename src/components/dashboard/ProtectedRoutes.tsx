@@ -1,10 +1,9 @@
 "use client";
 
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { StarknetContext } from "@/contexts/Usercontext";
 import { toast } from "sonner";
-import { usePathname } from "next/navigation";
 
 interface Props {
   children: React.ReactNode;
@@ -13,16 +12,21 @@ interface Props {
 const ProtectedRoute = ({ children }: Props) => {
   const { address, status } = useContext(StarknetContext);
   const router = useRouter();
-  const pathname = usePathname();
+  const [checking, setChecking] = useState(true); 
+  console.log(status, address)
 
   useEffect(() => {
-    if (!address || status !== "connected") {
-      toast.error("Connect your wallet to access this page.", { position: "top-center" });
-      router.push(`/dashboard/auth/not-authenticated`);
-    } else {
-      return;
+    if (status === "connected" && address) {
+      setChecking(false); 
+    } else if (status === "disconnected" || !address) {
+      toast.error("Connect your wallet to access this page.", {
+        position: "top-center",
+      });
+      router.replace("/dashboard/auth/not-authenticated");
     }
-  }, [address, status, router, pathname]);
+  }, [status, address, router]);
+
+  if (checking) return null; 
 
   return <>{children}</>;
 };
