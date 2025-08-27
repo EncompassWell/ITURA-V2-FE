@@ -48,7 +48,7 @@ const OverviewCard = () => {
                   Use Active Learning Techniques
                 </span>
                 <p className="mt-5 text-[10px]">
-                  Talk every day: Practice speaking even if it's just with
+                  Talk every day: Practice speaking even if it&apos;s just with
                   yourself or use apps like app to talk to a native speaker.
                   Write every day: Try writing a simple journal in the language.
                 </p>

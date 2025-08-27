@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "sonner";
 import dynamic from "next/dynamic";
-import { RpcProvider } from "starknet";
 const StarknetContextProvider = dynamic(
   () =>
     import("@/contexts/Usercontext").then((mod) => mod.StarknetContextProvider),

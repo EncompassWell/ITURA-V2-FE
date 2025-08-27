@@ -45,7 +45,7 @@ const MobileAiCards = () => {
     {
       title: "What's on your",
       subtitle: "Mind",
-      description: "Let’s talk about what’s on your mind.",
+      description: "Let’s talk about what&apos;s on your mind.",
       img: "https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604685/mint_vgmzdu.svg",
     },
   ];

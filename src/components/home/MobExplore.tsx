@@ -44,7 +44,7 @@ const MobExplore = () => {
       </div>
       <div>
         <p className="text-[#A39EB6] px-4  my-7 w-[100%] lg:w-[80%] md:w-[80%]">
-          Easily track how you're feeling each day and watch your emotional
+          Easily track how you&apos;re feeling each day and watch your emotional
           journey unfold in beautiful colours. Spot trends, understand your
           triggers, and nurture your well-being
         </p>

@@ -8,10 +8,10 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import Image from "next/image";
 
 
-const ConnectWallet = ({showMobileNav}: any) => {
-  const { handleConnect }: any = useContext(StarknetContext);
-  const { connect, connectors } = useConnect();
-  const { disconnect } = useDisconnect()
+const ConnectWallet = () => {
+  const { handleConnect } = useContext(StarknetContext);
+  const {  connectors } = useConnect();
+  // const { disconnect } = useDisconnect()
   const { address } = useAccount()
   const controller = connectors[0] as ControllerConnector
   const [username, setUsername] = useState<string>()

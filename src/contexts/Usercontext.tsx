@@ -11,11 +11,13 @@ import {
   Connector,
 } from '@starknet-react/core';
 
+type SessionAccountInterface = any;
+
 interface StarknetContextType {
   isLoading: boolean;
   setIsLoading: (isLoading: boolean) => void;
-  account: any;
-  setAccount: (account: any) => void;
+  account: SessionAccountInterface | undefined;
+  setAccount: (account: SessionAccountInterface | undefined) => void;
   contractAddr: `0x${string}`;
   abi: any;
   token_addr: `0x${string}`;

@@ -37,7 +37,7 @@ const Error = () => {
             <div
               className={`p-3 border inline-flex items-center justify-center rounded-lg mr-4 my-auto shadow-lg rotate-12 ${bgClass}`}
             >
-              <p className="text-[14px]"> We're glad you're here🎉</p>
+              <p className="text-[14px]"> We&apos;re glad you&apos;re here🎉</p>
             </div>
             <div
               className={`p-3 border  flex items-center justify-center w-[50px] h-[45px] rounded-lg mt-auto mr-4 shadow-lg -rotate-12 ${bgClass}`}

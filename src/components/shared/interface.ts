@@ -7,7 +7,7 @@ export  interface Data {
 export interface Messages {
   type: string;
   sender: string;
-  content: any;
+  content: unknown;
 }
 
 export interface Cards {

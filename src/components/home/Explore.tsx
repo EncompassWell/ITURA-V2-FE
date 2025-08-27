@@ -35,7 +35,7 @@ const Explore = () => {
               <span className="font-instrumentSerif italic"> Colours.</span>
             </h2>
             <p className="text-[#A39EB6] px-4 lg:px-0 md:px-0 my-7 w-[100%] lg:w-[80%] md:w-[80%]">
-              Easily track how you're feeling each day and watch your emotional
+              Easily track how you&apos;re feeling each day and watch your emotional
               journey unfold in beautiful colours. Spot trends, understand your
               triggers, and nurture your well-being
             </p>

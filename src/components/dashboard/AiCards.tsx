@@ -45,7 +45,7 @@ const AICards = () => {
         className={`rounded-[30px] p-6 w-[100%] lg:w-[32%] md:w-[32%] flex flex-col border mb-4 ${themeColor}`}
       >
         <p className="lg:text-[18px] md:text-[18px] text-[16px] flex font-[500] items-center">
-          <GoDotFill /> What's on your{" "}
+          <GoDotFill /> What&apos;s on your{" "}
           <em className="font-[400] ml-2"> Mind</em>
         </p>
         <p className="text-[12px] ml-4 w-[100%] lg:w-[80%] md:w-[80%]">
