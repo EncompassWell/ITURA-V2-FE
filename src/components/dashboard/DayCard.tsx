@@ -8,7 +8,7 @@ const DayCard = () => {
   const [currentDate, setCurrentDate] = useState(dayjs());
 
   const startOfMonth = currentDate.startOf("month");
-  const endOfMonth = currentDate.endOf("month");
+  // const endOfMonth = currentDate.endOf("month");
   const startDay = startOfMonth.day();
   const daysInMonth = currentDate.daysInMonth();
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];

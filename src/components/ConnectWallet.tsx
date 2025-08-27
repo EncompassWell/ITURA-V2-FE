@@ -2,7 +2,7 @@
 
 import { useContext, useEffect, useState } from "react";
 import { StarknetContext } from "@/contexts/Usercontext";
-import { useAccount, useConnect, useDisconnect } from '@starknet-react/core'
+import { useAccount, useConnect } from '@starknet-react/core'
 import {ControllerConnector} from '@cartridge/connector'
 import { Dialog, DialogPanel } from "@headlessui/react";
 import Image from "next/image";
@@ -16,7 +16,7 @@ const ConnectWallet = () => {
   const controller = connectors[0] as ControllerConnector
   const [username, setUsername] = useState<string>()
   const [isOpen, setIsOpen] = useState(false);
-  console.log(connectors)
+  console.log(connectors, username)
 
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);

@@ -8,7 +8,7 @@ import { useContext } from "react";
 import { StarknetContext } from "@/contexts/Usercontext";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const { address, status } = useContext(StarknetContext);
+  const { status } = useContext(StarknetContext);
 
   return (
     <div className="flex justify-between relative lg:flex-row md:flex-row flex-col">

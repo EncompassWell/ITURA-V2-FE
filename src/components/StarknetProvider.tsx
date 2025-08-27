@@ -9,7 +9,7 @@ import {
   braavos,
   useInjectedConnectors,
 } from "@starknet-react/core";
-import Controller, { toSessionPolicies } from "@cartridge/controller";
+import { toSessionPolicies } from "@cartridge/controller";
 import { ControllerConnector } from "@cartridge/connector";
 import { constants } from "starknet";
 

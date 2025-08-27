@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { useConnect } from '@starknet-react/core';
 
 interface WalletConnectionWrapperProps {
   children: React.ReactNode;
