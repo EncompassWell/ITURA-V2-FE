@@ -4,7 +4,7 @@ import { TiPlus } from "react-icons/ti";
 import { motion, AnimatePresence } from "framer-motion";
 
 const FAQ = () => {
-  const [openFaqId, setOpenFaqId] = useState(null);
+  const [openFaqId, setOpenFaqId] = useState<number | null>(null);;
   interface Questions {
     id: number;
     question: string;
@@ -43,7 +43,7 @@ const FAQ = () => {
     },
   ];
 
-  const handleOpen = (id:any) => {
+  const handleOpen = (id:number) => {
     setOpenFaqId((prev) => (prev === id ? null : id));
   };
 

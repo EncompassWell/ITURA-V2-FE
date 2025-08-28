@@ -38,7 +38,7 @@ const Header = () => {
             />
           </Link>
           <nav className="w-[50%] flex justify-between">
-            <Link href="feature">Features</Link>
+            <Link href="#feature">Features</Link>
             <Link href="">
               How it Works
             </Link>
@@ -72,7 +72,7 @@ const Header = () => {
             />
           </Link>
           <nav className="w-[40%] flex justify-between items-center">
-            <Link href="feature">Features</Link>
+            <Link href="#feature">Features</Link>
             <Link href="">How it Works</Link>
             <Link href="">Forum</Link>
             <Link href="">Blog</Link>
@@ -111,7 +111,7 @@ const Header = () => {
             className={`p-8 py-12 h-[80vh] w-[100%] absolute top-20 left-0 text-white justify-center text-center z-30 flex flex-col items-center bg-black`}
           >
             <nav className="flex flex-col mt-10">
-              <Link href="feature" className="cursor-pointer mb-4">
+              <Link href="#feature" className="cursor-pointer mb-4">
                 Features
               </Link>
               <Link href="" className="mb-4">
@@ -160,7 +160,7 @@ const Header = () => {
               className={`p-8 py-12 h-[80vh] w-[100%] absolute top-20 left-0 text-white justify-center text-center z-50 flex flex-col items-center bg-black`}
             >
               <nav className="flex flex-col mt-10">
-                <Link href="feature" className="cursor-pointer mb-4">
+                <Link href="#feature" className="cursor-pointer mb-4">
                   Features
                 </Link>
                 <Link href="" className="mb-4">

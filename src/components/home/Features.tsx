@@ -44,7 +44,7 @@ const Features = () => {
   }, []);
 
   return (
-    <div className="lg:w-[95%] md:w-[95%] w-[90%] mx-auto my-18" id="#feature">
+    <div className="lg:w-[95%] md:w-[95%] w-[90%] mx-auto my-18 scroll-mt-20" id="#feature">
       <div className="lg:flex md:flex hidden justify-between">
         {data.map((info) => (
           <div

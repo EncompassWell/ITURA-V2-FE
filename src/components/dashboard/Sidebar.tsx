@@ -13,7 +13,7 @@ const Sidebar = () => {
   const themeColor = "bg-white/15 border-white/20";
   const currentPath = usePathname();
  
-  const isActive = (path:any) =>
+  const isActive = (path:string) =>
     currentPath === path ? "bg-white/10 rounded-[10px] border border-white/10 shadow-lg p-2" : "";
 
   return (
