@@ -9,7 +9,7 @@ interface SkeletonLoaderProps {
   className?: string;
 }
 
-const NotAuthenticated = ({ className }: SkeletonLoaderProps) => {
+const NotAuthenticated: React.FC<SkeletonLoaderProps> = ({ className }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const redirectTo = searchParams.get("redirectTo");
