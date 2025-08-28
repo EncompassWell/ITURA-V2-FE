@@ -3,13 +3,12 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useContext, useEffect } from "react";
 import { StarknetContext } from "@/contexts/Usercontext";
-import { cn } from "@/lib/utils";
 
-interface SkeletonLoaderProps {
-  className?: string;
-}
+// interface SkeletonLoaderProps {
+//   className?: string;
+// }
 
-const NotAuthenticated = ({ className }: { className?: string }) => {
+const NotAuthenticated = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const redirectTo = searchParams.get("redirectTo");
@@ -23,38 +22,33 @@ const NotAuthenticated = ({ className }: { className?: string }) => {
 
   return (
     <div
-      className={cn(
-        "animate-pulse space-y-4 p-6 rounded-lg bg-muted w-[80%] mx-auto my-4",
-        className
-      )}
+      className= "animate-pulse space-y-4 p-6 rounded-lg bg-muted w-[80%] mx-auto my-4"
     >
-      <div className={cn(
-        "animate-pulse space-y-4 p-6 rounded-lg bg-muted mb-4",
-        className
-      )}>
+      <div className="animate-pulse space-y-4 p-6 rounded-lg bg-muted mb-4">
       <div className="h-8 w-24 bg-gray-300 rounded mt-4" />
         <div className="h-6 w-1/2 bg-gray-300 rounded" />
         <div className="h-4 w-full bg-gray-300 rounded" />
         <div className="h-4 w-5/6 bg-gray-300 rounded" />
         <div className="h-4 w-2/3 bg-gray-300 rounded" />
       </div>
-      <div className={cn(
-        "animate-pulse space-y-4 p-6 rounded-lg bg-muted mb-4",
-        className
-      )}>
+      <div className="animate-pulse space-y-4 p-6 rounded-lg bg-muted mb-4">
+      <div className="h-8 w-24 bg-gray-300 rounded mt-4" />
         <div className="h-6 w-1/2 bg-gray-300 rounded" />
         <div className="h-4 w-full bg-gray-300 rounded" />
         <div className="h-4 w-5/6 bg-gray-300 rounded" />
         <div className="h-4 w-2/3 bg-gray-300 rounded" />
-        <div className="h-8 w-24 bg-gray-300 rounded mt-4" />
       </div>
-      <div className={cn(
-        "animate-pulse space-y-4 p-6 rounded-lg bg-muted mb-4",
-        className
-      )}>
+      <div className="animate-pulse space-y-4 p-6 rounded-lg bg-muted mb-4">
+      <div className="h-8 w-24 bg-gray-300 rounded mt-4" />
         <div className="h-6 w-1/2 bg-gray-300 rounded" />
         <div className="h-4 w-full bg-gray-300 rounded" />
-        <div className="h-8 w-24 bg-gray-300 rounded my-4" />
+        <div className="h-4 w-5/6 bg-gray-300 rounded" />
+        <div className="h-4 w-2/3 bg-gray-300 rounded" />
+      </div>
+      <div className="animate-pulse space-y-4 p-6 rounded-lg bg-muted mb-4">
+      <div className="h-8 w-24 bg-gray-300 rounded mt-4" />
+        <div className="h-6 w-1/2 bg-gray-300 rounded" />
+        <div className="h-4 w-full bg-gray-300 rounded" />
         <div className="h-4 w-5/6 bg-gray-300 rounded" />
         <div className="h-4 w-2/3 bg-gray-300 rounded" />
       </div>
