@@ -5,7 +5,9 @@ import { TbSend2 } from "react-icons/tb";
 import markImg from "../../assets/marklogo.svg";
 import ravatar from "../../assets/avatar.svg";
 import { NavLink } from "react-router-dom";
-import { Messages } from '../shared/interface'
+import { ImageMessage, MusicMessage, TextMessage } from "../shared/interface";
+
+type Messages = TextMessage | ImageMessage | MusicMessage;
 
 const messages: Messages[] = [
   { type: "text", sender: "ai", content: "Hello! How can I assist you?" },

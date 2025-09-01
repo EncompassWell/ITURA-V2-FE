@@ -15,7 +15,7 @@ const MobileSidebar = () => {
   const [scrolled, setScrolled] = useState(false);
   const currentPath = usePathname();
 
-  const isActive = (path) =>
+  const isActive = (path:string) =>
     currentPath === path
       ? "bg-white/10 rounded-[10px] border border-white/10 shadow-lg p-2"
       : "";
