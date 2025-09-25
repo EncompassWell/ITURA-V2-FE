@@ -7,7 +7,6 @@ import { LuMessageCircle } from "react-icons/lu";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import ProtectedRoute from "./ProtectedRoutes";
 
 const Sidebar = () => {
   const currentPath = usePathname();
@@ -17,7 +16,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className="w-[20%] text-white p-8 py-12 h-[100vh] hidden lg:flex md:flex flex-col border-r border-white/10 overflow-y-scroll lg:max-h-[982px] md:max-h-[960px] no-scrollbar bg-[#080514]"
+      className="w-[20%] text-white p-8 py-12 h-[100vh] hidden lg:flex md:flex flex-col border-r bottom-2 border-white/20 overflow-y-scroll lg:max-h-[982px] md:max-h-[960px] no-scrollbar bg-[#080514]"
     >
       <Link href="/">
         <Image
@@ -28,18 +27,6 @@ const Sidebar = () => {
           className="mb-20"
         />
       </Link>
-      <div className="flex items-center mb-10">
-        <Image
-          src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604688/ravatar_zs1bzd.svg"
-          alt="User ravatar"
-          width={60}
-          height={60}
-        />
-        <p className="text-[12px] ml-3">
-          Jo Edor <br />
-          <span className="text-white/60">0xe12ewas.......</span>
-        </p>
-      </div>
       <Link
         href="/dashboard"
         className={`text-[13px] flex items-center py-4 mb-2 px-4 font-medium ${isActive(
