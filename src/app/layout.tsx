@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "sonner";
-import { AuthProvider } from "@/context/AuthContext";
+import Providers from "@/providers/Providers";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Itura",
@@ -15,11 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-inter max-w-[1550px] mx-auto w-[100%]">
-        <AuthProvider>
+      <body className="font-inter max-w-[1550px] mx-auto w-[100%] bg-[#030A04] text-white">
+        <Providers>
           {children}
           <Toaster richColors={true} position="top-right" />
-        </AuthProvider>
+        </Providers>
       </body>
     </html>
   );

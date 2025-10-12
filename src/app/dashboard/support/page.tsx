@@ -1,12 +1,24 @@
-import ProtectedRoute from '@/components/dashboard/ProtectedRoute'
-import React from 'react'
+import React from "react";
+import Filter from "@/components/dashboard/Filter";
+import SupportCard from "@/components/dashboard/SupportCard";
 
 const Support = () => {
   return (
-    <ProtectedRoute>
-    <div>page</div>
-    </ProtectedRoute>
-  )
-}
+    <div className="w-[95%] mx-auto">
+      <div className="mb-10">
+        <h1 className="lg:text-[24px] md:text-[22px] text-[18px] font-[500] bg-gradient-to-b from-[#F5F4F7] via-[#F3F2F5] to-[#B0ADBF] inline-block text-transparent bg-clip-text">
+          Get Pro Support
+        </h1>
+        <p className="text-[14px]">
+          Consult with specialists in various fields
+        </p>
+      </div>
+      <div className="mb-10">
+        <Filter />
+      </div>
+      <SupportCard />
+    </div>
+  );
+};
 
-export default Support
+export default Support;
