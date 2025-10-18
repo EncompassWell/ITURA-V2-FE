@@ -1,8 +1,13 @@
 import React from 'react'
+import Profile from '@/components/dashboard/Profile'
 
 const OracleReading = () => {
   return (
-    <div>page</div>
+    <div>
+       <div className='flex justify-end'>
+      <Profile />
+      </div>
+    </div>
   )
 }
 
