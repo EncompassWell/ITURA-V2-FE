@@ -9,7 +9,7 @@ const Journal = () => {
   const themeColor = "bg-white/15 border-white/20";
 
   return (
-    <main className="flex flex-col lg:min-h-[80vh] md:min-h-[80vh] min-h-[90vh]">
+    <main className="flex flex-col lg:min-h-[80vh] md:min-h-[80vh] min-h-[90vh] relative z-30">
        <div className='flex justify-end'>
       <Profile />
       </div>
@@ -24,20 +24,15 @@ const Journal = () => {
         <div
           className={`flex items-center w-[100%] rounded-full border py-2 px-4  shadow-lg shadow-grey/20 ${themeColor}`}
         >
-          <div className="flex items-center">
-            <FiCamera className="mr-2" />
-            <CiImageOn className="mr-2" />
-            <FiFolderMinus className="mr-2" />
-          </div>
           <input
             type="text"
             placeholder="Type Here"
-            className="bg-transparent outline-0"
+            className="bg-transparent outline-0 text-[14px]"
           />
           <button
             className={`ml-auto rounded-full p-2 border shadow-xl ${themeColor}`}
           >
-            <MdArrowUpward className="text-[30px]" />
+            <MdArrowUpward className="lg:text-[30px] md:text-[26px] text-[20px]" />
           </button>
         </div>
         <div className="my-6 w-[90%] mx-auto hidden lg:block md:block">
