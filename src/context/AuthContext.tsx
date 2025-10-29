@@ -11,8 +11,7 @@ type AuthContextType = {
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
-  userId: string | null;
-  profileName: string | null;
+  userDetails: any | null;
 };
 
 const AuthContext = createContext<AuthContextType>({} as AuthContextType);
@@ -23,14 +22,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const [userId, setUserId] = useState<string | null>(null)
-  const [profileName, setProfileName] = useState<string | null>(null)
   const { data } = useGetUserDetails(userId);
-
-  useEffect(() => {
-    if (data?.data?.userName !== "string") {
-      setProfileName(data?.data.userName);
-    }
-  }, [data]);
+  const userDetails = data?.data || null;
 
   useEffect(() => {
     const checkConnection = async () => {
@@ -49,6 +42,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
     checkConnection();
   }, [aegisAccount]);
+
+  // console.log(data)
 
   const login = async (email: string, password: string): Promise<void> => {
     setLoading(true);
@@ -96,7 +91,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, logout, userId, profileName }}>
+    <AuthContext.Provider value={{ user, loading, login, logout, userDetails }}>
       {children}
     </AuthContext.Provider>
   );
