@@ -125,7 +125,7 @@ const Waitlist = () => {
 
                     </div>
                     <form onSubmit={handleSubmit} className="w-full flex flex-col gap-10 justify-center mt-8 items-center">
-                        <div className=" flex flex-col md:flex-row gap-4">
+                        <div className=" flex flex-col md:flex-row gap-4 w-full">
                             <div className="space-y-2">
                                 <label htmlFor="community" className="text-sm font-medium text-white/70">
                                     Your Community

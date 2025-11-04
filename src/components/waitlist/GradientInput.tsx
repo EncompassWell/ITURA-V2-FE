@@ -13,7 +13,7 @@ const GradientInput = React.forwardRef<HTMLInputElement, GradientInputProps>(({ 
   }
 
   return (
-    <div className="relative group w-[326px]">
+    <div className="relative group w-full md:w-[326px]">
       <div
         className={cn(
           "absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 p-[1px]",
