@@ -112,7 +112,7 @@ const Waitlist = () => {
 
                         </div>
                         <div className=" font-normal text-sm leading-7 md:text-lg flex text-center flex-col gap-10 md:gap-6">
-                            <p className="text-sm"> tressed from endless scrolls and creative blocks? <br />
+                            <p className="text-sm"> Stressed from endless scrolls and creative blocks? <br />
                                 Itura is your secret chill spot 😌</p>
                             <p className="text-sm">Guided meditations, Astrological Insights, Oracle readings + chats with Creative Pros.<br />
                                 A feel-good flow for your mind, body, and spark.</p>
