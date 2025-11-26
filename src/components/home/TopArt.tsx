@@ -42,17 +42,17 @@ const TopArt = () => {
             />
           <div className="flex items-center">
             <h2 className="text-[20px] bg-gradient-to-b from-[#F5F4F7] via-[#F3F2F5] to-[#B0ADBF] inline-block text-transparent bg-clip-text lg:text-[28px] md:text-[28px] font-medium">
-              0+{" "}
+              500+ {" "}
             </h2>
-            <p className="text-[12px] font-normal text-white/60 mr-2">Users </p>
+            <p className="text-[12px] font-normal text-white/60 mr-2"> Users </p>
             <FaCircleArrowUp className="text-xs text-red-400 my-auto" />
           </div>
         </div>
         <div>
           <h2 className="text-[30px] bg-gradient-to-b from-[#F5F4F7] via-[#F3F2F5] to-[#B0ADBF] inline-block text-transparent bg-clip-text lg:text-[46px] md:text-[46px] font-medium">
-            0+
+            1,000+
           </h2>
-          <p className="text-[20px] leading-3"> Artworks</p>
+          <p className="text-[20px] leading-3"> Artworks </p>
         </div>
       </div>
     </div>
