@@ -21,25 +21,25 @@ const FAQ = () => {
       id: 2,
       question: "How do I get started?",
       answer:
-        "We offer a free plan with essential features, plus premium options for deeper wellness support.",
+        "Join the waitlist to get early access to the app.",
     },
     {
       id: 3,
       question: "What makes Itura different from other wellness apps?",
       answer:
-        "We offer a free plan with essential features, plus premium options for deeper wellness support.",
+        "We blend AI, astrology, and real human professionals into one flow — no clunky apps, no therapy stigma. It’s your creative reset button, built for scroll-fatigued dreamers who want clarity fast.",
     },
     {
       id: 4,
       question: "Do I need to be an artist to use Itura?",
       answer:
-        "We offer a free plan with essential features, plus premium options for deeper wellness support.",
+        "Nope! Itura works for anyone  craving balance — but we’re tuned for creatives (writers, designers, musicians, dreamers). No drawing skills required.",
     },
     {
       id: 5,
       question: "Is Itura a replacement for therapy?",
       answer:
-        "We offer a free plan with essential features, plus premium options for deeper wellness support.",
+        "We are a holistic wellness co-pilot — think mood check-ins, oracle pulls, and vetted professionals such as coaches, legal, financial support. Not medical advice. For serious mental health needs, please see a licensed therapist.",
     },
   ];
 

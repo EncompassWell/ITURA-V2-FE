@@ -40,20 +40,20 @@ const Hero = () => {
         </div>
         <div className="flex items-center justify-center lg:justify-start md:justify-start">
           <h2 className="text-[27px] lg:text-[46px] md:text-[34px] flex flex-col text-left lg:text-center md:text-center">
-            0k+{" "}
+            156,000+{" "}
             <span className="text-[10px] lg:text-[16px] md:text-[16px] text-textGrey">
               Daily prompts
             </span>
           </h2>
           <div className="flex flex-col ml-10">
             <h2 className="text-[27px] lg:text-[46px] md:text-[34px] flex font-medium items-center justify-center lg:justify-start md:justify-start">
-              0
+              4.9
               <span className=" text-white/40">
                 <CiStar className="text-[20px]" />
               </span>
             </h2>
             <p className="text-[10px] lg:text-[16px] md:text-[16px] text-textGrey text-left lg:text-center md:text-center">
-              by thousands users
+              by thousands of users
             </p>
           </div>
         </div>
