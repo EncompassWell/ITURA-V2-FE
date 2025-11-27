@@ -32,7 +32,7 @@ const Support = () => {
           privately, and at your own pace.
         </p>
         <button className="bg-gradient-to-r text-[11px] lg:text-[16px] md:text-[16px] from-lightOrange to-orange rounded-xl text-white p-3 font-[500] px-10">
-          Find a Vetted Therapist
+          Join Beta Test
         </button>
       </div>
     </div>

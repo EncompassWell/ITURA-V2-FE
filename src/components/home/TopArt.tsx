@@ -29,10 +29,10 @@ const TopArt = () => {
         </h3>
         <p className="my-2 text-white/80 text-center lg:text-left md:text-left">See what other creatives are making, and share your own!</p>
         <button className="bg-gradient-to-r mt-10 from-orange to-lightOrange rounded-xl text-white py-3 px-8 font-[500]">
-            Explore
+            Join Beta
           </button>
       </div>
-      <div className="flex justify-between my-8 lg:w-[80%] md:w-[80%] w-[90%] mx-auto">
+      {/* <div className="flex justify-between my-8 lg:w-[80%] md:w-[80%] w-[90%] mx-auto">
         <div>
         <Image 
             src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604686/People_p3hg15.svg"
@@ -54,7 +54,7 @@ const TopArt = () => {
           </h2>
           <p className="text-[20px] leading-3"> Artworks </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

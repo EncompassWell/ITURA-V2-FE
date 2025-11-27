@@ -3,6 +3,7 @@ import { CiStar } from "react-icons/ci";
 import { GoDotFill } from "react-icons/go";
 import Lottie from "lottie-react";
 import ituraAnimation from "@/constants/itura.json"
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -29,31 +30,35 @@ const Hero = () => {
           journey is yours alone.
         </p>
         <div className="my-12">
-          <button className="bg-linear-to-r from-orange to-lightOrange rounded-xl text-white p-3 font-[500]">
-            Launch the app
-          </button>
-          <button
+        <Link
+            href="/waitlist"
+            className="bg-gradient-to-r from-orange to-lightOrange rounded-xl text-white p-3"
+            prefetch={true}
+          >
+           Join Beta Test
+          </Link>
+          {/* <button
             className={`rounded-xl ml-3 px-4 border dark:border-white/10 p-3 font-[500] shadow-lg bg-white/10`}
           >
             Watch demo
-          </button>
+          </button> */}
         </div>
         <div className="flex items-center justify-center lg:justify-start md:justify-start">
           <h2 className="text-[27px] lg:text-[46px] md:text-[34px] flex flex-col text-left lg:text-center md:text-center">
-            156,000+{" "}
+            150+{" "}
             <span className="text-[10px] lg:text-[16px] md:text-[16px] text-textGrey">
-              Daily prompts
+              Beta Sign-Ups
             </span>
           </h2>
           <div className="flex flex-col ml-10">
             <h2 className="text-[27px] lg:text-[46px] md:text-[34px] flex font-medium items-center justify-center lg:justify-start md:justify-start">
-              4.9
+              11+
               <span className=" text-white/40">
-                <CiStar className="text-[20px]" />
+
               </span>
             </h2>
             <p className="text-[10px] lg:text-[16px] md:text-[16px] text-textGrey text-left lg:text-center md:text-center">
-              by thousands of users
+              Creative Professionals
             </p>
           </div>
         </div>
