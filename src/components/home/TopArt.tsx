@@ -32,7 +32,7 @@ const TopArt = () => {
             Explore
           </button>
       </div>
-      <div className="flex justify-between my-8 lg:w-[80%] md:w-[80%] w-[90%] mx-auto">
+      {/* <div className="flex justify-between my-8 lg:w-[80%] md:w-[80%] w-[90%] mx-auto">
         <div>
         <Image 
             src="https://res.cloudinary.com/dqw6qvymf/image/upload/v1752604686/People_p3hg15.svg"
@@ -54,7 +54,7 @@ const TopArt = () => {
           </h2>
           <p className="text-[20px] leading-3"> Artworks </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
