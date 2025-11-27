@@ -29,7 +29,7 @@ const TopArt = () => {
         </h3>
         <p className="my-2 text-white/80 text-center lg:text-left md:text-left">See what other creatives are making, and share your own!</p>
         <button className="bg-gradient-to-r mt-10 from-orange to-lightOrange rounded-xl text-white py-3 px-8 font-[500]">
-            Explore
+            Join Beta
           </button>
       </div>
       {/* <div className="flex justify-between my-8 lg:w-[80%] md:w-[80%] w-[90%] mx-auto">
