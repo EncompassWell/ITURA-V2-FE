@@ -35,11 +35,11 @@ const Header = () => {
           </nav>
 
           <Link
-            href="/login"
+            href="/waitlist"
             className="bg-gradient-to-r from-orange to-lightOrange rounded-xl text-white p-3"
             prefetch={true}
           >
-            Launch the app
+           Join Beta Test
           </Link>
         </div>
       </div>
@@ -73,11 +73,11 @@ const Header = () => {
             </nav>
 
             <Link
-              href="/login"
+              href="/waitlist"
               className="p-3 bg-gradient-to-r from-orange to-lightOrange rounded-xl text-white"
               prefetch={true}
             >
-              Launch the app
+              Join Beta Test
             </Link>
           </div>
         )}
